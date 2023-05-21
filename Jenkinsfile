@@ -1,13 +1,14 @@
 pipeline {
     agent any
     tools {
-       maven 'Maven 3.9.2'
-       jdk 'jdk11'
-    }    
+        maven 'MAVEN3.9.2'
+        jdk 'AdoptOpenJDK_8u222'
+    }
     stages {
         stage('Initialize') {
             steps {
                 sh '''
+                    'mvn pmd:pmd -s usersettings.xml'
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
