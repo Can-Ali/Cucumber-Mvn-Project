@@ -15,18 +15,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn Cucumber-Mvn-Project/pom.xml -B -DskipTests clean package'
+                sh 'mvn -f pom.xml -B -DskipTests clean package'
             }
             post {
                 success {
-                    echo "Now Archiving the Artifacts....."
+//                     echo "Now Archiving the Artifacts....."
                     archiveArtifacts artifacts: '**/*.jar'
                 }
             }
         }
         stage('Test') {
             steps {
-//                 sh 'mvn -f Cucumber-Mvn-Project/pom.xml test'
+                sh 'mvn -f Cucumber-Mvn-Project/pom.xml test'
                 sh 'mvn clean verify -DfailIfNoTests=false'
             }
             post {
