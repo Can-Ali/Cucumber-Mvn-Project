@@ -31,7 +31,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'Cucumber/target/surefire-reports/*.xml'
+                    junit 'Cucumber-Mvn-Project/target/surefire-reports/*.xml'
                     html 'target/cucumber-report.html'
                 }
             }
@@ -41,5 +41,7 @@ pipeline {
                 cucumber buildStatus: "UNSTABLE",
                     fileIncludePattern: "**/cucumber.json",
                     jsonReportDirectory: "target"
+            }
+        }
     }
 }
