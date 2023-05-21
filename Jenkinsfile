@@ -31,7 +31,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'Cucumber-Mvn-Project/target/surefire-reports/*.xml'
+//                     junit 'Cucumber-Mvn-Project/target/surefire-reports/*.xml'
                     html 'target/cucumber-report.html'
                 }
             }
