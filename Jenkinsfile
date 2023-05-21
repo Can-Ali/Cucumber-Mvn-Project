@@ -8,7 +8,6 @@ pipeline {
         stage('Initialize') {
             steps {
                 sh '''
-                    'mvn pmd:pmd -s usersettings.xml'
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
