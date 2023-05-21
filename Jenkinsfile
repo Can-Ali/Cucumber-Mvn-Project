@@ -4,6 +4,12 @@ pipeline {
         maven 'MAVEN'
         jdk 'JDK'
     }
+    options {
+        timestamps ()
+        ansiColor('xterm')
+        buildDiscarder(logRotator(numTOKeepStr: '10'))
+    }
+
     stages {
         stage('Initialize') {
             steps {
