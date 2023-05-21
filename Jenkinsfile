@@ -1,9 +1,18 @@
 pipeline {
     agent any
     tools {
-       maven 'MAVEN3.8.8'
+       maven 'Maven 3.8.8'
+       jdk 'jdk8'
     }    
     stages {
+        stage('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -f Cucumber/pom.xml -B -DskipTests clean package'
