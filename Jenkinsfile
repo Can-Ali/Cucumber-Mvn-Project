@@ -29,12 +29,12 @@ pipeline {
                 sh 'mvn -f pom.xml test'
                 sh 'mvn clean verify -DfailIfNoTests=false'
             }
-            post {
-                always {
+//             post {
+//                 always {
 //                     junit 'Cucumber-Mvn-Project/target/surefire-reports/*.xml'
-                    html 'target/cucumber-report.html'
-                }
-            }
+//                     html 'target/cucumber-report.html'
+//                 }
+//             }
         }
         stage('Cucumber Report') {
             steps {
