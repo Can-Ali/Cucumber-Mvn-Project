@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn -f Cucumber/pom.xml -B -DskipTests clean package'
+                sh 'mvn -f Cucumber-Mvn-Project/pom.xml -B -DskipTests clean package'
             }
             post {
                 success {
