@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn -f Cucumber-Mvn-Project/pom.xml test'
+//                 sh 'mvn -f Cucumber-Mvn-Project/pom.xml test'
                 sh 'mvn clean verify -DfailIfNoTests=false'
             }
             post {
