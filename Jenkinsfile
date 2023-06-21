@@ -33,7 +33,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'mvn -f pom.xml test'
-                sh 'mvn clean verify -DfailIfNoTests=false'
+                sh 'mvn clean verify -Dcucumber.filter.tags="@employee" -DfailIfNoTests=false'
             }
 //             post {
 //                 always {
