@@ -44,6 +44,7 @@ switch statement will determine the case, and open the browser.
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--no-sandbox");
+                    options.addArguments("--headless");
 //                    options.addArguments("--headless");
                     driver = new ChromeDriver(options);
                     driver.manage().window().maximize();
@@ -52,7 +53,8 @@ switch statement will determine the case, and open the browser.
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions options1 = new FirefoxOptions();
-                    options1.addArguments("--no-sandbox");
+//                    options1.addArguments("--no-sandbox");
+                    options1.addArguments("--headless");
                     driver = new FirefoxDriver(options1);
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
