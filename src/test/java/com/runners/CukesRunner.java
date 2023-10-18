@@ -1,4 +1,4 @@
-package com.cydeo.runners;
+package com.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitons",
         dryRun = false, // true means that do not run my step definitions but only check if any step is missing snippet.
-        tags = ""
+        tags = "@google"
 )
 
 public class CukesRunner {

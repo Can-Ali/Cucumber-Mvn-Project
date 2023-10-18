@@ -1,16 +1,14 @@
-package com.cydeo.step_definitons;
+package com.step_definitons;
     /*
     In the class we will be able to pass pre- & post- conditions to
     each scenario and each step
     */
 
 
-import com.cydeo.utilities.Driver;
+import com.utilities.Driver;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
-import javax.swing.*;
 
 public class Hooks {
     // we import from io.cucumber.java not from junit
