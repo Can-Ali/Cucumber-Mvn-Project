@@ -1,7 +1,7 @@
-package com.cydeo.step_definitons;
+package com.step_definitons;
 
-import com.cydeo.pages.WikipediaSearchPage;
-import com.cydeo.utilities.Driver;
+import com.pages.WikipediaSearchPage;
+import com.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,7 +18,8 @@ public class Wiki_StepDefinitions {
     }
 
     @When("User types {string} in the wiki search box")
-    public void user_types_in_the_wiki_search_box(String string) {
+    public void user_types_in_the_wiki_search_box(String string) throws InterruptedException {
+        Thread.sleep(3000);
         wikipediaSearchPage.searchBox.sendKeys(string);
 
     }
