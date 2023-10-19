@@ -10,6 +10,10 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
 
+    parameters {
+        string(name: 'TagName', defaultValue: "@employee", description: 'Scenario Tag to be run')
+    }
+    
     stages {
         stage('Initialize') {
             steps {
@@ -33,7 +37,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'mvn -f pom.xml test'
-                sh 'mvn clean verify -Dcucumber.filter.tags="@employee" -DfailIfNoTests=false'
+                sh 'mvn clean verify -Dcucumber.filter.tags='$params.TagName' -DfailIfNoTests=false'
             }
 //             post {
 //                 always {
