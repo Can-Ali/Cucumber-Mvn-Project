@@ -39,8 +39,7 @@ pipeline {
             steps {
                 script {
                     sh 'mvn -f pom.xml test'
-                    sh 'mvn clean verify -Dcucumber.filter.tags='$params.TagName' -DfailIfNoTests=false'
-                    }    
+                    sh 'mvn clean verify -Dcucumber.filter.tags='$params.TagName' -DfailIfNoTests=false'                        
                 }
             }
 //             post {
