@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn -f pom.xml -B -DskipTests clean package'
+                sh "mvn -f pom.xml -B -DskipTests clean package"
             }
             post {
                 success {
@@ -36,8 +36,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn -f pom.xml test'
-                sh 'mvn clean verify -Dcucumber.filter.tags='$params.TagName' -DfailIfNoTests=false'
+                sh "mvn -f pom.xml test"
+                sh "mvn clean verify -Dcucumber.filter.tags='$params.TagName' -DfailIfNoTests=false"
             }
 //             post {
 //                 always {
