@@ -19,8 +19,10 @@ pipeline {
         stage('Initialize') {
             steps {
                 sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
+                    script {
+                        echo "PATH = ${PATH}"
+                        echo "M2_HOME = ${M2_HOME}"
+                    }
                 '''
             }
         }
@@ -37,8 +39,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn -f pom.xml test'
-                sh 'mvn clean verify -Dcucumber.filter.tags='$params.TagName' -DfailIfNoTests=false'
+                script {
+                    sh 'mvn -f pom.xml test'
+                    sh 'mvn clean verify -Dcucumber.filter.tags='$params.TagName' -DfailIfNoTests=false'
+                }
             }
 //             post {
 //                 always {
