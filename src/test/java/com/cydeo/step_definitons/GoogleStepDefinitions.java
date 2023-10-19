@@ -1,7 +1,7 @@
-package com.step_definitons;
+package com.cydeo.step_definitons;
 
-import com.pages.GoogleSearchPage;
-import com.utilities.Driver;
+import com.cydeo.pages.GoogleSearchPage;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -51,9 +51,10 @@ public class GoogleStepDefinitions {
     }
 
     @When("user is on Google search page")
-    public void user_is_on_google_search_page() {
+    public void user_is_on_google_search_page() throws InterruptedException {
 
-        Driver.getDriver().get("https://www.google.com");
+        Driver.getDriver().get("https://www.google.com/");
+        Thread.sleep(5000);
 
     }
 

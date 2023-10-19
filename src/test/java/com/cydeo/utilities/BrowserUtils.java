@@ -1,4 +1,4 @@
-package com.utilities;
+package com.cydeo.utilities;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

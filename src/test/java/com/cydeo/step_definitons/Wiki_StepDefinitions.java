@@ -1,7 +1,7 @@
-package com.step_definitons;
+package com.cydeo.step_definitons;
 
-import com.pages.WikipediaSearchPage;
-import com.utilities.Driver;
+import com.cydeo.pages.WikipediaSearchPage;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
