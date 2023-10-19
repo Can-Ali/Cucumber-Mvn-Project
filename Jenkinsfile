@@ -10,9 +10,9 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
 
-    triggers {
-        cron('0 6 * * 1-5')
-    }
+    // triggers {
+    //     cron('0 6 * * 1-5')
+    // }
     
     parameters {
         string(name: 'TagName', defaultValue: "@employee", description: 'Scenario Tag to be run')
