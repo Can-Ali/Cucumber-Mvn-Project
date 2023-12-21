@@ -6,7 +6,7 @@ pipeline {
     }
     options {
         timestamps ()
-        ansiColor('xterm')
+        ansiColor('gnome-terminal')
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
 
