@@ -50,6 +50,16 @@ switch statement will determine the case, and open the browser.
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
+                case "chrome-headless":
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions optionsHeadless = new ChromeOptions();
+                    optionsHeadless.addArguments("--no-sandbox");
+//                    options.addArguments("--headless");
+                    optionsHeadless.addArguments("--headless");
+                    driver = new ChromeDriver(optionsHeadless);
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions options1 = new FirefoxOptions();
