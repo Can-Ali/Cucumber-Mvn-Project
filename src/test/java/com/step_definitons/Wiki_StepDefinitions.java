@@ -39,7 +39,5 @@ public class Wiki_StepDefinitions {
     public void userSeesSteveJobsIsInTheMainHeader(String string) {
         Assert.assertTrue(wikipediaSearchPage.mainHeader.isDisplayed());
         Assert.assertTrue(wikipediaSearchPage.mainHeader.getText().equals(string));
-
-
     }
 }
