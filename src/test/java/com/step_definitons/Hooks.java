@@ -7,6 +7,7 @@ package com.step_definitons;
 
 import com.utilities.Driver;
 import io.cucumber.java.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -27,6 +28,7 @@ public class Hooks {
     @Before(value = "@db", order = 0)
     public void setupForDataBaseScenarios() {
         System.out.println("======this will only apply to scenarios with @db tag");
+        WebDriverManager.chromedriver().setup();
 
     }
 
