@@ -46,6 +46,17 @@ switch statement will determine the case, and open the browser.
                     options.addArguments("--no-sandbox");
 //                    options.addArguments("--headless");
 //                    options.addArguments("--headless");
+                    options.setHeadless(false);
+                    options.addArguments("start-maximized"); // open Browser in maximized mode
+                    options.addArguments("disable-infobars"); // disabling infobars
+                    options.addArguments("--disable-extensions"); // disabling extensions
+                    options.addArguments("--disable-gpu"); // applicable to Windows os only
+                    options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                    options.addArguments("--no-sandbox"); // Bypass OS security model
+                    options.addArguments("--disable-in-process-stack-traces");
+                    options.addArguments("--disable-logging");
+                    options.addArguments("--log-level=3");
+                    options.addArguments("--remote-allow-origins=*");
                     driver = new ChromeDriver(options);
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
