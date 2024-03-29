@@ -18,8 +18,8 @@ Feature: Wikipedia search functionality and verification
     Examples: search values we are going to be using in this scenario is as below
       | searchValue       | expectedTitle     | expectedMainHeader |
       | Steve Jobs        | Steve Jobs        | Steve Jobs         |
-#      | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
-#      | Bob Marley        | Bob Marley        | Bob Marley         |
+      | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
+      | Bob Marley        | Bob Marley        | Bob Marley         |
 #      | Chuck Norris      | Chuck Norris      | Chuck Norris       |
 #      | Antony Hopkins    | Antony Hopkins    | Antony Hopkins     |
 #      | Marie Curie       | Marie Curie       | Marie Curie        |
